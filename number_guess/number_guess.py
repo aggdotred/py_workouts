@@ -4,8 +4,12 @@ secret_number = random.randint(0, 100)
 
 
 def get_guess():
-    guess = input("What's your guess? ")
-    return int(guess)
+    try:
+        guess = int(input("What's your guess? "))
+        check_guess(guess)
+    except:
+        print("Please enter a whole number not a string.")
+        get_guess()
 
 
 def check_guess(guess_int):
@@ -21,5 +25,4 @@ def check_guess(guess_int):
         check_guess(new_guess)
 
 
-guess = get_guess()
-check_guess(guess)
+get_guess()
