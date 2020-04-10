@@ -15,14 +15,13 @@ def get_guess():
 def check_guess(guess_int):
     if guess_int == secret_number:
         print("You win!")
+        return
     elif guess_int > secret_number:
         print("Too high!")
         new_guess = get_guess()
-        check_guess(new_guess)
     else:
         print("Too low!")
         new_guess = get_guess()
-        check_guess(new_guess)
 
 
 get_guess()
