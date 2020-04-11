@@ -24,3 +24,6 @@ def return_average(number_list):
 
 times_list = get_run_times()
 print(return_average(times_list))
+
+# notes I like the separation of concerns over the proposed solution from the book
+# but I wonder if the list is more expensive than keeping a sum and count.
